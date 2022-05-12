@@ -1,0 +1,27 @@
+﻿<Window x:Class="ImageNameApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ImageNameApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Viewbox Stretch="Fill">
+            <Canvas Height="434" Width="800">
+                <Button x:Name="newSourse" Content="New" Canvas.Left="15" Canvas.Top="10" Height="24" Width="77" Click="newSourse_Click" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Button x:Name="openSourse" Content="Open" Canvas.Left="91" Canvas.Top="10" Height="24" Width="77" Click="openSourse_Click" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Button x:Name="saveSourse" Content="Save" Canvas.Left="167" Canvas.Top="10" Height="24" Width="77" HorizontalAlignment="Left" VerticalAlignment="Center" Click="saveSourse_Click" />
+                <ListBox x:Name="ListElements" Height="346" Width="154" d:ItemsSource="{d:SampleData ItemCount=5}" Canvas.Top="51" Canvas.Left="14" HorizontalAlignment="Center" VerticalAlignment="Top" SelectionChanged="ListElements_SelectionChanged"/>
+                <Image x:Name="imgView" Height="294" Canvas.Left="408" Canvas.Top="61" Width="327"/>
+                <Button x:Name="NewElement" Content="New Element" Canvas.Left="14" Canvas.Top="399" HorizontalAlignment="Center" VerticalAlignment="Top" Width="154" Height="24" Click="NewElement_Click"/>
+                <Button x:Name="SelectImage" Content="Select Image.." Canvas.Left="645" Canvas.Top="359" HorizontalAlignment="Left" VerticalAlignment="Center" Width="89" Click="SelectImage_Click"/>
+                <TextBox x:Name="TextName" Canvas.Left="191" TextWrapping="Wrap" Canvas.Top="79" Width="199" HorizontalAlignment="Center" Height="276" VerticalAlignment="Top" TextAlignment="Left" BorderThickness="0,1,0,1"/>
+                <Label x:Name="LabelText" Content="Text" Canvas.Left="188" Canvas.Top="50"/>
+                <Button x:Name="SaveElement" Content="Save" Canvas.Left="703" Canvas.Top="400" Height="24" Width="77" Click="saveElement_Click" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                <Button x:Name="CancelElement" Content="Cancel" Canvas.Left="627" Canvas.Top="400" Height="24" Width="77" Click="cancelElement_Click" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Button x:Name="RemoveElement" Content="Remove" Canvas.Left="182" Canvas.Top="370" Height="24" Width="77" Click="removeElement_Click" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            </Canvas>
+        </Viewbox>
+    </Grid>
+</Window>
